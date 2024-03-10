@@ -1,0 +1,100 @@
+//create user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "fikri",
+    "email": "fikri@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "user"
+}
+
+
+###
+//get ALL USER
+
+GET http://localhost:5000/users
+
+###
+
+//get single user
+GET http://localhost:5000/users/03eaef36-064b-4ea4-be63-87fadbb8c793
+
+###
+//update user
+
+PATCH  http://localhost:5000/users/03eaef36-064b-4ea4-be63-87fadbb8c793
+Content-Type: application/json
+
+{
+    "name": "ZhaAdmin4 Updated",
+    "email": "admin4@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "admin"
+}
+
+###
+//delete user
+
+DELETE  http://localhost:5000/users/03eaef36-064b-4ea4-be63-87fadbb8c793
+
+
+###
+//login admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin3@gmail.com",
+    "password": "123456"
+}
+
+###
+// me
+GET http://localhost:5000/me
+
+###
+// Logout
+DELETE http://localhost:5000/logout
+
+###
+//login user
+
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "fikri@gmail.com",
+    "password": "123456"
+}
+
+##########################################################################
+//get ALL PRODUCT
+
+GET http://localhost:5000/products
+
+###
+//get SINGLE PRODUCT
+GET http://localhost:5000/products/77428686-e385-4f65-b404-4a4b51363373
+
+###
+// POST DATA PRODUCT
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Sepatu Khusus Admin 3",
+    "price": 120000
+}
+
+###
+// UPDATE DATA PRODUCT
+PATCH http://localhost:5000/products/77428686-e385-4f65-b404-4a4b51363373
+Content-Type: application/json
+
+{
+    "name": "Sepatu Khusus Admin 3 UPDATED",
+    "price": 99999
+}
